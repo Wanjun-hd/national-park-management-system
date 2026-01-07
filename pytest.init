@@ -1,0 +1,42 @@
+[pytest]
+# pytest配置文件
+
+# Python路径配置（重要！）
+pythonpath = .
+
+# 测试根目录配置（加载自定义conftest）
+confcutdir = tests
+
+# 测试文件匹配模式
+python_files = test_*.py
+python_classes = Test*
+python_functions = test_*
+
+# 测试目录
+testpaths = tests
+
+# 命令行选项
+addopts = 
+    -v
+    --tb=short
+    --strict-markers
+    -p no:warnings
+
+# 标记定义
+markers =
+    database: 数据库相关测试
+    procedure: 存储过程测试
+    query: SQL查询测试
+    slow: 慢速测试（执行时间较长）
+
+# 最小版本要求
+minversion = 7.0
+
+# 控制台输出
+console_output_style = progress
+
+# 日志配置
+log_cli = true
+log_cli_level = INFO
+log_cli_format = %(asctime)s [%(levelname)8s] %(message)s
+log_cli_date_format = %Y-%m-%d %H:%M:%S
