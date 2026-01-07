@@ -1,2 +1,23 @@
-nul
+# --- Frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# --- Backend / Python ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Tooling ---
 .claude/
+
+# --- Windows device trap ---
+nul
